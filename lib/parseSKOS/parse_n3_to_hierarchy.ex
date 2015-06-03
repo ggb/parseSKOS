@@ -51,7 +51,7 @@ defmodule ParseSKOS.ParseNTriple do
     end
   end
     
-  def run(path) do
+  def get(path) do
     path
     |> File.read!
     |> String.split("\n", trim: true)

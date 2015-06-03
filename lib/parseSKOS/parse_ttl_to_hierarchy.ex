@@ -65,10 +65,10 @@ defmodule ParseSKOS.ParseTurtle do
     |> Enum.map(fn { ident, phrase } -> { ident, String.replace(phrase, "-", " ") } end)
   end
   
-  def run(:stw), do: run("stw.ttl")
-  def run(:ccs), do: run("ccs.ttl")
+  def get(:stw), do: run("stw.ttl")
+  def get(:ccs), do: run("ccs.ttl")
   
-  def run(path) do
+  def get(path) do
     path
     |> File.read!
     |> String.split("\n\n", trim: true)
