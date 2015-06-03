@@ -4,8 +4,8 @@ defmodule ParseSKOS.Hierarchy do
   alias ParseSKOS.ParseTurtle
   alias ParseSKOS.ParseNTriple
 
-  @stw ParseTurtle.run(:stw)
-  @ccs ParseTurtle.run(:ccs)
+  @stw ParseTurtle.get(:stw)
+  @ccs ParseTurtle.get(:ccs)
 
   def get(:stw), do: @stw
   def get(:ccs), do: @ccs
